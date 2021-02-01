@@ -7,6 +7,7 @@
     <meta http-equiv=“Content-Security-Policy” content=“upgrade-insecure-requests”>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weekly Food Planner Pro</title>
+    <link rel="stylesheet" type="text/css" href="./Develop/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 
@@ -14,7 +15,7 @@
 <body>
     <section class="section">
         <div class="container">
-            <div class="container is-centered">
+            <div class="container is-centered notification is-primary has-background-info">
             <h1 class="title">
                 Weekly Food Planner Pro (Beta)
             </h1>
@@ -23,8 +24,16 @@
             </p>
         </div>
         </section>
-
-        <input class="input" type="text" placeholder="Text input">
+        <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Find a recipe">
+            </div>
+            <div class="control2">
+              <a class="button is-info has-background-info">
+                Search
+              </a>
+            </div>
+          </div>
 </body>
 
 
