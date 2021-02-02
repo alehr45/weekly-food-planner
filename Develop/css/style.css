@@ -12,11 +12,14 @@ padding-left: 55px;
 
 }
 
-button.has-background-info-light {
-width: 100%;
+div.content {
 display: flex;
-justify-content: center;
-
+width: fit-content;
+text-align: center;
+margin: auto;
+padding: 10px;
+background-color:lightgoldenrodyellow;
+color: #fad2d2;
 }
 
 .choose {

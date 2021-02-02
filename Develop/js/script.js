@@ -10,7 +10,7 @@ var formSumbitHandler = function (event) {
   } else {
     alert("Please enter a valid food item");
   }
- };
+};
 
 pullData = function (data) {
   var recipe = recipeSearchEl.value.trim();
@@ -25,16 +25,23 @@ pullData = function (data) {
         }
       });
   
-  };
+};
   
-  function showRecipes(data) {
-    document.getElementById('recipe1').innerHTML = data.results[0].title;
-    document.getElementById('recipe2').innerHTML = data.results[1].title;
-    document.getElementById('recipe3').innerHTML = data.results[2].title;
-    document.getElementById('recipe4').innerHTML = data.results[3].title;
-    document.getElementById('recipe5').innerHTML = data.results[4].title;
+function showRecipes(data) {
+    document.getElementById('recipe1').innerHTML = data.results[0].title.fontcolor("#9b96ff");
+    document.getElementById('recipe2').innerHTML = data.results[1].title.fontcolor("#9b96ff");
+    document.getElementById('recipe3').innerHTML = data.results[2].title.fontcolor("#9b96ff");
+    document.getElementById('recipe4').innerHTML = data.results[3].title.fontcolor("#9b96ff");
+    document.getElementById('recipe5').innerHTML = data.results[4].title.fontcolor("#9b96ff");
+};
 
-  };
+$(function() {
+  $(".card").draggable( {
+    helper: "clone",
+    cursor: "move", cursorAt: { top: 60, left: 40 }
+  });
   
+})
 
-  submitEl.addEventListener("click", formSumbitHandler);
+submitEl.addEventListener("click", formSumbitHandler);
+
