@@ -37,4 +37,12 @@ pullData = function (data) {
   };
   
 
+  let weekDay = moment()
+  weekDay.subtract(weekDay.day()+1,"days")
+  document.querySelectorAll(".box p").forEach(function(title) {
+    
+    //thisDay.add(-1,"days").format("ddd, MMM Do YY");
+    title.innerText = weekDay.add(1,"days").format("ddd, MMM Do YY");
+  });
+
   submitEl.addEventListener("click", formSumbitHandler);
