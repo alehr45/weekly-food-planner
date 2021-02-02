@@ -44,6 +44,5 @@ pullData = function (data) {
     document.getElementById('recipe5').innerHTML = '<a href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " minutes" + '</a>';
 };
   
-
-  submitEl.addEventListener("click", formSumbitHandler);  
+submitEl.addEventListener("click", formSumbitHandler);  
   
