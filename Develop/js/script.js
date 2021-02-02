@@ -20,13 +20,21 @@ pullData = function (data) {
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-            console.log(data);
+            showRecipes(data);
           });
         }
       });
   
   };
   
+  function showRecipes(data) {
+    document.getElementById('recipe1').innerHTML = data.results[0].title;
+    document.getElementById('recipe2').innerHTML = data.results[1].title;
+    document.getElementById('recipe3').innerHTML = data.results[2].title;
+    document.getElementById('recipe4').innerHTML = data.results[3].title;
+    document.getElementById('recipe5').innerHTML = data.results[4].title;
+
+  };
   
 
   submitEl.addEventListener("click", formSumbitHandler);

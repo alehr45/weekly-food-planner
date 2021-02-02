@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  
     <meta charset="utf-8">
     <meta http-equiv=“Content-Security-Policy” content=“upgrade-insecure-requests”>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,30 +9,39 @@
     <link rel="stylesheet" type="text/css" href="./Develop/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
-
-
 <body>
     <section class="section">
         <div class="container">
             <div class="container is-centered notification is-primary has-background-info">
-            <h1 class="title">
-                Weekly Food Planner Pro (Beta)
-            </h1>
-            <p class="subtitle">
-                Plan your meals for the week by storing the recipes!
-            </p>
+                <h1 class="title">
+                    Weekly Food Planner Pro (Beta)
+                </h1>
+                <p class="subtitle">
+                    Plan your meals for the week by storing the recipes!
+                </p>
+            </div>
+    </section>
+    <div>
+    <h1 class="question">What sounds good to eat?
+    </div>
+    <div class="field has-addons">
+        <div class="control">
+            <input id="recipe" class="input" type="text" placeholder="Find a recipe">
         </div>
-        </section>
-        <div class="field has-addons">
-            <div class="control">
-              <input id="recipe" class="input" type="text" placeholder="Find a recipe">
-            </div>
-            <div class="control2">
-              <a class="button is-info has-background-info submit">
-                Search
-              </a>
-            </div>
-          </div>
+        <div class="control2">
+            <a class="button is-info has-background-info submit">Search</a>
+        </div>
+    </div>
+<h1 class="choose">Choose a recipe to add to your weekly planner</h1>
+    <div class="buttons">
+        <button id="recipe1" class="button is-rounded has-background-info-light"></button>
+        <button id="recipe2" class="button is-rounded has-background-info-light"></button>
+        <button id="recipe3" class="button is-rounded has-background-info-light"></button>
+        <button id="recipe4" class="button is-rounded has-background-info-light"></button>
+        <button id="recipe5" class="button is-rounded has-background-info-light"></button>
+    </div>
+
+    <h3 class="planner">Your Weekly Planner</h3>
 </body>
 
 

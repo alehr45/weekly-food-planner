@@ -11,3 +11,35 @@
 padding-left: 55px;
 
 }
+
+button.has-background-info-light {
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+
+.choose {
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.planner{
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.question {
+    margin: 10px;
+    padding-left: 55px;
+    padding-top: 10px;
+
+
+}
