@@ -12,14 +12,32 @@ padding-left: 55px;
 
 }
 
+div.card {
+    padding: 2px;
+    border-radius: 15px;
+}
+
+div.card-content {
+    display: flex;
+    background-color: skyblue;
+    width: 300px;
+    justify-content: center;
+    margin: auto;
+    border:solid teal;
+    border-radius: 15px;
+}
+
 div.content {
 display: flex;
-width: fit-content;
+width: 250px;
+height: fit-content;
+justify-content: center;
 text-align: center;
 margin: auto;
-padding: 10px;
 background-color:lightgoldenrodyellow;
-color: #fad2d2;
+color: #f3a7a7;
+border-radius: 10px;
+padding: 5px;
 }
 
 .choose {
