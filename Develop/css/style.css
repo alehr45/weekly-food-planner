@@ -4,15 +4,16 @@ padding: 0px;
 }
 
 
-
 .title  {
     text-align: center;
 }
 
-.subtitle {
-    font-size: x-small;
-    text-align: center;
+.plan {
+    display: flex;
+    justify-content: center;
+    
 }
+
 
 .input{
     display: flex;
@@ -73,6 +74,7 @@ font-size: 25px;
 }
 
 .container.is-centered {
+    margin-top: 30px;
     text-align: center;
 }
 
