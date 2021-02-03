@@ -30,6 +30,13 @@ pullData = function (data) {
   
   };
 
+  function dragButton(event) {
+    event.preventDefault();
+    event.dataTransfer.setData("text", event.target.id);
+    event.target.appendChild(document.getElementById("time1"));
+  }
+
+
   function showDates(){
     document.getElementById('time1').innerHTML = "Today"
     document.getElementById('time2').innerHTML = "Tomorrow"
