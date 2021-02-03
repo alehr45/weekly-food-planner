@@ -24,20 +24,14 @@ pullData = function (data) {
         if (response.ok) {
           response.json().then(function (data) {
            showRecipes(data);
+           
           });
         }
       });
   
   };
 
-  function dragButton(event) {
-    event.preventDefault();
-    event.dataTransfer.setData("text", event.target.id);
-    event.target.appendChild(document.getElementById("time1"));
-  }
-
-
-  function showDates(){
+ function showDates(){
     document.getElementById('time1').innerHTML = "Today"
     document.getElementById('time2').innerHTML = "Tomorrow"
     document.getElementById('time3').innerHTML = moment().add(2, 'days').format('dddd');
@@ -60,6 +54,24 @@ pullData = function (data) {
     document.getElementById('recipe4').innerHTML = '<a href="' + searchUrl4 + '"target="_blank">' + data.results[3].title + " - Ready in " + data.results[3].readyInMinutes + " mins" + '</a>';
     document.getElementById('recipe5').innerHTML = '<a href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
 };
-  showDates();
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.preventDefault();
+  event.dataTransfer.setData("recipe1", event.target.id);
+ 
+}
+
+function drop(event) {
+  event.preventDefault(data);
+  var data = event.dataTransfer.getData("recipe1" , event.target.id);
+  event.target.appendChild(document.getElementById("recipe1"));
+}
+
+showDates();
 submitEl.addEventListener("click", formSumbitHandler);  
+
   
