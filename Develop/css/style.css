@@ -5,6 +5,7 @@ padding: 0px;
 
 
 .title  {
+    padding: 0px;
     text-align: center;
 }
 
@@ -15,7 +16,11 @@ padding: 0px;
     text-align: center;
     
 }
+ .image{
+     margin-top: 0px;
+width: 100%;
 
+ }
 
 .input{
     display: flex;
