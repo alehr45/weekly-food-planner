@@ -31,8 +31,8 @@ pullData = function (data) {
   };
 
   function showDates(){
-    document.getElementById('time1').innerHTML = moment().add(0, 'days').format('dddd');
-    document.getElementById('time2').innerHTML = moment().add(1, 'days').format('dddd');
+    document.getElementById('time1').innerHTML = "Today"
+    document.getElementById('time2').innerHTML = "Tomorrow"
     document.getElementById('time3').innerHTML = moment().add(2, 'days').format('dddd');
     document.getElementById('time4').innerHTML = moment().add(3, 'days').format('dddd');
     document.getElementById('time5').innerHTML = moment().add(4, 'days').format('dddd');
