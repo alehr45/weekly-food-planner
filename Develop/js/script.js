@@ -1,5 +1,8 @@
 var recipeSearchEl = document.querySelector("#recipe");
+var momentEl = moment().format('MMMM Do YYYY, h:mm:ss a');
 var submitEl = document.querySelector(".submit");
+var today = document.querySelector("#currentDay");
+today.innerHTML = (momentEl);
 
 
 var formSumbitHandler = function (event) {
@@ -20,29 +23,54 @@ pullData = function (data) {
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-            showRecipes(data);
+           showRecipes(data);
+           
           });
         }
       });
   
   };
+
+ function showDates(){
+    document.getElementById('time1').innerHTML = "Today"
+    document.getElementById('time2').innerHTML = "Tomorrow"
+    document.getElementById('time3').innerHTML = moment().add(2, 'days').format('dddd');
+    document.getElementById('time4').innerHTML = moment().add(3, 'days').format('dddd');
+    document.getElementById('time5').innerHTML = moment().add(4, 'days').format('dddd');
+    document.getElementById('time6').innerHTML = moment().add(5, 'days').format('dddd');
+    document.getElementById('time7').innerHTML = moment().add(6, 'days').format('dddd');
+
+  }
   
   function showRecipes(data) {
-    document.getElementById('recipe1').innerHTML = data.results[0].title;
-    document.getElementById('recipe2').innerHTML = data.results[1].title;
-    document.getElementById('recipe3').innerHTML = data.results[2].title;
-    document.getElementById('recipe4').innerHTML = data.results[3].title;
-    document.getElementById('recipe5').innerHTML = data.results[4].title;
+    var searchUrl1 =  data.results[0].sourceUrl;
+    var searchUrl2 =  data.results[1].sourceUrl;
+    var searchUrl3 =  data.results[2].sourceUrl;
+    var searchUrl4 =  data.results[3].sourceUrl;
+    var searchUrl5 =  data.results[4].sourceUrl;
+    document.getElementById('recipe1').innerHTML = '<a href="' + searchUrl1 + '"target="_blank">' + data.results[0].title + " - Ready in " + data.results[0].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe2').innerHTML = '<a href="' + searchUrl2 + '"target="_blank">' + data.results[1].title + " - Ready in " + data.results[1].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe3').innerHTML = '<a href="' + searchUrl3 + '"target="_blank">' + data.results[2].title + " - Ready in " + data.results[2].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe4').innerHTML = '<a href="' + searchUrl4 + '"target="_blank">' + data.results[3].title + " - Ready in " + data.results[3].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe5').innerHTML = '<a href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
+};
 
-  };
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.preventDefault();
+  event.dataTransfer.setData("recipe1", event.target.id);
+}
+
+function drop(event) {
+  event.preventDefault(data);
+  var data = event.dataTransfer.getData("recipe1" , event.target.id);
+  event.target.appendChild(document.getElementById("recipe1"));
+}
+
+showDates();
+submitEl.addEventListener("click", formSumbitHandler);  
+
   
-
-  let weekDay = moment()
-  weekDay.subtract(weekDay.day()+1,"days")
-  document.querySelectorAll(".box p").forEach(function(title) {
-    
-    //thisDay.add(-1,"days").format("ddd, MMM Do YY");
-    title.innerText = weekDay.add(1,"days").format("ddd, MMM Do YY");
-  });
-
-  submitEl.addEventListener("click", formSumbitHandler);

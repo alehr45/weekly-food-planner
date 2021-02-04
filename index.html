@@ -9,90 +9,96 @@
     <link rel="stylesheet" type="text/css" href="./Develop/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
+
 <body>
     <section class="section">
-        <div class="container">
-            <div class="container is-centered notification is-primary has-background-info">
+        <div class="container1">
+            <div class="container is-fullhd notification is-primary has-background-info">
                 <h1 class="title">
-                    Weekly Food Planner Pro (Beta)
+                    Weekly Food Planner Pro (1.0)
                 </h1>
                 <p class="subtitle">
-                    Plan your meals for the week by storing the recipes!
+                    <h5 class="plan">Plan your meals for the week by storing the recipes!
                 </p>
             </div>
     </section>
     <div>
-    <h1 class="question">What sounds good to eat?
+        
+            <img class="image" src="./background image.jpg">
+            <h1 class="question">What sounds good to eat?
     </div>
     <div class="field has-addons">
         <div class="control">
-            <input id="recipe" class="input" type="text" placeholder="Find a recipe">
+            <input id="recipe" class="input" type="text" placeholder="Find a recipe...">
         </div>
         <div class="control2">
-            <a class="button is-info has-background-info submit">Search</a>
+            <a class="button is-info has-background-info submit is-full-widescreen " type="submit"
+                value="submit">Search</a>
         </div>
     </div>
-<h1 class="choose">Choose a recipe to add to your weekly planner</h1>
-    <div class="buttons">
-        <button id="recipe1" class="button is-rounded has-background-info-light"></button>
-        <button id="recipe2" class="button is-rounded has-background-info-light"></button>
-        <button id="recipe3" class="button is-rounded has-background-info-light"></button>
-        <button id="recipe4" class="button is-rounded has-background-info-light"></button>
-        <button id="recipe5" class="button is-rounded has-background-info-light"></button>
+    <h1 class="choose">Choose a recipe to add to your weekly planner.</h1>
+    <div>
+        <div class="buttons">
+            <button id="recipe1"  draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe2"  draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe3"  draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe4"  draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe5"  draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+        </div>
     </div>
 
-    <h3 class="planner">Your Weekly Planner</h3>
-    <div class="columns">
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    <h3 class="planner">--Your Weekly Planner--</h3>
+    <div>
+        <h1 id="currentDay" class="time">Time
+
+    </div>
+
+    <div class="container">
+        <div id="time1" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Monday
+
         </div>
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    </div>
+    <div class="container">
+        <div id="time2" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Tuesday
+
         </div>
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    </div>
+    <div class="container">
+        <div id="time3" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Wednesday
+
         </div>
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    </div>
+    <div class="container">
+        <div id="time4" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Thursday
+
         </div>
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    </div>
+    <div class="container">
+        <div id="time5" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Friday
+
         </div>
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    </div>
+    <div class="container">
+        <div id="time6" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Saturday
+
         </div>
-        <div class="column is-narrow">
-            <div class="box" style="width: 200px;">
-              <p class="title is-5"></p>
-              <textarea class="textarea" placeholder=""></textarea>
-            </div>
+    </div>
+    <div class="container">
+        <div id="time7" ondrop="drop(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Sunday
+
         </div>
-    
-     
-       
-        
-        
+    </div>
 </body>
+<div>
+    <div></div>
+    <footer class="container is-widescreen is-centered notification is-primary has-background-info"> &copy Copyright 2021</footer>
+</div>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"></script>
+
 <script src="./Develop/js/script.js"></script>
 
 </html>
