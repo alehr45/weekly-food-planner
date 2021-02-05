@@ -64,10 +64,11 @@ function onDragStart(event) {
 }
 
 function onDrop(event) {
-  var id = event.dataTransfer.getData('text');
+  var id = event.dataTransfer.setData('text');
   var draggableElement = document.getElementById(id);
   var dropzone = event.target;
   dropzone.appendChild(draggableElement);
+  console.log
 }
 
 showDates();
