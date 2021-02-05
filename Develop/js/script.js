@@ -55,19 +55,19 @@ pullData = function (data) {
     document.getElementById('recipe5').innerHTML = '<a href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
 };
 
-function allowDrop(event) {
+function onDragOver(event) {
   event.preventDefault();
 }
 
-function drag(event) {
-  event.preventDefault();
-  event.dataTransfer.setData("recipe1", event.target.id);
+function onDragStart(event) {
+  event.dataTransfer.setData("text/plain", event.target.id);
 }
 
-function drop(event) {
-  event.preventDefault(data);
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
+function onDrop(event) {
+  var id = event.dataTransfer.getData('text');
+  var draggableElement = document.getElementById(id);
+  var dropzone = event.target;
+  dropzone.appendChild(draggableElement);
 }
 
 showDates();
