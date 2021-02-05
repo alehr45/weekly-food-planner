@@ -73,7 +73,7 @@ function drag(event) {
 function drop1 (event) {
   event.preventDefault();
   var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("data-recipe", 1));
+  event.target.appendChild(document.getElementById("recipe1"));
   
 }
 
