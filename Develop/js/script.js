@@ -79,8 +79,8 @@ function drop1 (event) {
 
 function drop2(event) {
   event.preventDefault();
-  var data = event.dataTransfer.getData("recipe2" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe2"));
+  var data = event.dataTransfer.getData("recipe1" , event.target.id);
+  event.target.appendChild(document.getElementById("recipe1"));
 }
 
 function drop3(event) {
