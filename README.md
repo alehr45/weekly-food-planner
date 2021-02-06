@@ -23,14 +23,6 @@ Audience or demographic =
 
 5. Anyone who likes to plan their meals for the future.
 
-Our team split up the tasks to make this application
-
-I (Alex) worked mainly on the layout and design aspects. I put together the html and basic javascript fetch functions.
-
-Fraser implemented the moment JavaScript library which displays the current time and days of the week to make our calendar work functionally.
-
-Dustin designed and created the drag and drop feature which adds much more functionality to the app.
-
 
 **OUR APP IS MOBILE FRIENDLY**
 
@@ -39,7 +31,9 @@ Bulma (mobile 1st framework),
 Moment
 
 Future Goals for this application:
+
 Calorie Counters
+
 Ingredient Lists
 
 
