@@ -39,11 +39,11 @@
     <h1 class="choose">Choose a recipe to add to your weekly planner.</h1>
     <div>
         <div class="buttons">
-            <button id="recipe1" draggable="true" data-recipe="1" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
-            <button id="recipe2" draggable="true" data-recipe="2" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
-            <button id="recipe3" draggable="true" data-recipe="3" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
-            <button id="recipe4" draggable="true" data-recipe="4" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
-            <button id="recipe5" draggable="true" data-recipe="5" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe1"  ondragstart="onDragStart(event);" draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe2"  ondragstart="onDragStart(event);" draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe3"  ondragstart="onDragStart(event);" draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe4"  ondragstart="onDragStart(event);" draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
+            <button id="recipe5"  ondragstart="onDragStart(event);" draggable="true" class="button is-rounded has-background-info-light has-text-grey-dark"></button>
         </div>
     </div>
 
@@ -54,37 +54,37 @@
     </div>
 
     <div class="container">
-        <div id="time1" ondrop="drop1(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Monday
+        <div id="time1" ondrop="onDrop(event);" ondragover="onDragOver(event);" class="notification is-rounded has-background-info-light is-mobile">Monday
 
         </div>
     </div>
     <div class="container">
-        <div id="time2" ondrop="drop2(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Tuesday
+        <div id="time2" ondrop="onDrop(event);" ondragover="onDragOver(event);" class="notification is-rounded has-background-info-light is-mobile">Tuesday
 
         </div>
     </div>
     <div class="container">
-        <div id="time3" ondrop="drop3(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Wednesday
+        <div id="time3" ondrop="onDrop(event);"  ondragover="onDragOver(event)" class="notification is-rounded has-background-info-light is-mobile">Wednesday
 
         </div>
     </div>
     <div class="container">
-        <div id="time4" ondrop="drop4(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Thursday
+        <div id="time4" ondrop="onDrop(event);"  ondragover="onDragOver(event)" class="notification is-rounded has-background-info-light is-mobile">Thursday
 
         </div>
     </div>
     <div class="container">
-        <div id="time5" ondrop="drop5(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Friday
+        <div id="time5" ondrop="onDrop(event);"  ondragover="onDragOver(event)" class="notification is-rounded has-background-info-light is-mobile">Friday
 
         </div>
     </div>
     <div class="container">
-        <div id="time6" ondrop="drop6(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Saturday
+        <div id="time6" ondrop="onDrop(event);"  ondragover="onDragOver(event)" class="notification is-rounded has-background-info-light is-mobile">Saturday
 
         </div>
     </div>
     <div class="container">
-        <div id="time7" ondrop="drop7(event)" ondragover="allowDrop(event)" class="notification is-rounded has-background-info-light is-mobile">Sunday
+        <div id="time7"  ondrop="onDrop(event);" ondragover="onDragOVer(event)" class="notification is-rounded has-background-info-light is-mobile">Sunday
 
         </div>
     </div>

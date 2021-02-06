@@ -48,73 +48,29 @@ pullData = function (data) {
     var searchUrl3 =  data.results[2].sourceUrl;
     var searchUrl4 =  data.results[3].sourceUrl;
     var searchUrl5 =  data.results[4].sourceUrl;
-    document.getElementById('recipe1').innerHTML = '<a href="' + searchUrl1 + '"target="_blank">' + data.results[0].title + " - Ready in " + data.results[0].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe2').innerHTML = '<a href="' + searchUrl2 + '"target="_blank">' + data.results[1].title + " - Ready in " + data.results[1].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe3').innerHTML = '<a href="' + searchUrl3 + '"target="_blank">' + data.results[2].title + " - Ready in " + data.results[2].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe4').innerHTML = '<a href="' + searchUrl4 + '"target="_blank">' + data.results[3].title + " - Ready in " + data.results[3].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe5').innerHTML = '<a href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe1').setAttribute("data-recipe", "1");
-    document.getElementById('recipe2').setAttribute("data-recipe", "2");
-    document.getElementById('recipe3').setAttribute("data-recipe", "3");
-    document.getElementById('recipe4').setAttribute("data-recipe", "4");
-    document.getElementById('recipe5').setAttribute("data-recipe", "5");
+    document.getElementById('recipe1').innerHTML = '<a draggable="false" href="' + searchUrl1 + '"target="_blank">' + data.results[0].title + " - Ready in " + data.results[0].readyInMinutes + " mins" + '</a></h1>';
+    document.getElementById('recipe2').innerHTML = '<a draggable="false" href="' + searchUrl2 + '"target="_blank">' + data.results[1].title + " - Ready in " + data.results[1].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe3').innerHTML = '<a draggable="false" href="' + searchUrl3 + '"target="_blank">' + data.results[2].title + " - Ready in " + data.results[2].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe4').innerHTML = '<a draggable="false" href="' + searchUrl4 + '"target="_blank">' + data.results[3].title + " - Ready in " + data.results[3].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe5').innerHTML = '<a draggable="false" href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
 };
 
-function allowDrop(event) {
+function onDragOver(event) {
   event.preventDefault();
 }
 
-function drag(event) {
-  event.preventDefault();
-  event.dataTransfer.setData("recipe1", event.target.id);
- 
+function onDragStart(event) {
+  event.dataTransfer.setData("text/plain", event.target.id);
+  console.log("event is", event)
 }
 
-function drop1 (event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-  
+function onDrop(event) {
+  var id = event.dataTransfer.getData('text');
+  var draggableElement = document.getElementById(id);
+  var dropzone = event.target;
+  dropzone.appendChild(draggableElement);
+  console.log
 }
-
-function drop2(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-}
-
-function drop3(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-}
-
-function drop4(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-}
-
-function drop5(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-}
-
-function drop6(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-}
-
-function drop7(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("recipe1" , event.target.id);
-  event.target.appendChild(document.getElementById("recipe1"));
-}
-
 
 showDates();
 submitEl.addEventListener("click", formSumbitHandler);  
-
-  
