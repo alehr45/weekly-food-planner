@@ -31,10 +31,6 @@ Fraser implemented the moment JavaScript library which displays the current tim
 
 Dustin designed and created the drag and drop feature which adds much more functionality to the app.
 
-We worked hard on this and we hope you enjoy it!
-
-
-API Used: Spoonacular!
 
 **OUR APP IS MOBILE FRIENDLY**
 
@@ -42,8 +38,7 @@ Technologies Used =
 Bulma (mobile 1st framework), 
 Moment
 
-Goals = 
-Drag and Drop addition of meals
+Future Goals for this application:
 Calorie Counters
 Ingredient Lists
 
