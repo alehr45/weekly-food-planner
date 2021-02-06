@@ -1,4 +1,4 @@
-# Weekly-Food-Planner
+# Weekly-Food-Planner-Pro-1.0
 
 
 ![Alt text](/screenshot.png?raw=true "Optional Title")
