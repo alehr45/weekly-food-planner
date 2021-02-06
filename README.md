@@ -1,6 +1,3 @@
-# Weekly-Food-Planner-Pro-1.0
-
-
 ![Alt text](/screenshot.png?raw=true "Optional Title")
 
 Group Project #1
