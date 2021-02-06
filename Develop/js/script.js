@@ -48,11 +48,11 @@ pullData = function (data) {
     var searchUrl3 =  data.results[2].sourceUrl;
     var searchUrl4 =  data.results[3].sourceUrl;
     var searchUrl5 =  data.results[4].sourceUrl;
-    document.getElementById('recipe1').innerHTML = '<a href="' + searchUrl1 + '"target="_blank">' + data.results[0].title + " - Ready in " + data.results[0].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe2').innerHTML = '<a href="' + searchUrl2 + '"target="_blank">' + data.results[1].title + " - Ready in " + data.results[1].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe3').innerHTML = '<a href="' + searchUrl3 + '"target="_blank">' + data.results[2].title + " - Ready in " + data.results[2].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe4').innerHTML = '<a href="' + searchUrl4 + '"target="_blank">' + data.results[3].title + " - Ready in " + data.results[3].readyInMinutes + " mins" + '</a>';
-    document.getElementById('recipe5').innerHTML = '<a href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe1').innerHTML = '<a draggable="false" href="' + searchUrl1 + '"target="_blank">' + data.results[0].title + " - Ready in " + data.results[0].readyInMinutes + " mins" + '</a></h1>';
+    document.getElementById('recipe2').innerHTML = '<a draggable="false" href="' + searchUrl2 + '"target="_blank">' + data.results[1].title + " - Ready in " + data.results[1].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe3').innerHTML = '<a draggable="false" href="' + searchUrl3 + '"target="_blank">' + data.results[2].title + " - Ready in " + data.results[2].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe4').innerHTML = '<a draggable="false" href="' + searchUrl4 + '"target="_blank">' + data.results[3].title + " - Ready in " + data.results[3].readyInMinutes + " mins" + '</a>';
+    document.getElementById('recipe5').innerHTML = '<a draggable="false" href="' + searchUrl5 + '"target="_blank">' + data.results[4].title + " - Ready in " + data.results[4].readyInMinutes + " mins" + '</a>';
 };
 
 function onDragOver(event) {
@@ -61,10 +61,11 @@ function onDragOver(event) {
 
 function onDragStart(event) {
   event.dataTransfer.setData("text/plain", event.target.id);
+  console.log("event is", event)
 }
 
 function onDrop(event) {
-  var id = event.dataTransfer.setData('text');
+  var id = event.dataTransfer.getData('text');
   var draggableElement = document.getElementById(id);
   var dropzone = event.target;
   dropzone.appendChild(draggableElement);
