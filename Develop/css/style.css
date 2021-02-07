@@ -74,6 +74,8 @@ font-size: 25px;
 }
 
 .container {
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 10px;
@@ -83,5 +85,9 @@ font-size: 25px;
 .container.is-centered {
     margin-top: 30px;
     text-align: center;
+}
+
+#save {
+    justify-content: center;
 }
 

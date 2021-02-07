@@ -2,8 +2,17 @@ var recipeSearchEl = document.querySelector("#recipe");
 var momentEl = moment().format('MMMM Do YYYY, h:mm:ss a');
 var submitEl = document.querySelector(".submit");
 var today = document.querySelector("#currentDay");
+var savedRecipeEl = document.querySelector("#saved-recipe-buttons");
+var saveBtnEl = document.querySelector("#saveBtn");
+var recipeList = document.querySelector("#storedRecipe")
 today.innerHTML = (momentEl);
 
+var recipeArr = [];
+var dateArr = [];
+
+
+
+//window.onload = loadRecipes();
 
 var formSumbitHandler = function (event) {
   event.preventDefault();
@@ -60,8 +69,8 @@ function onDragOver(event) {
 }
 
 function onDragStart(event) {
-  event.dataTransfer.setData("text/plain", event.target.id);
-  console.log("event is", event)
+  event.dataTransfer.setData("text", event.target.id);
+  //console.log(event.target.id)
 }
 
 function onDrop(event) {
@@ -69,8 +78,30 @@ function onDrop(event) {
   var draggableElement = document.getElementById(id);
   var dropzone = event.target;
   dropzone.appendChild(draggableElement);
-  console.log
+  //isolate id of droppable container
+  var dateEl = dropzone.id;
+  //isolate dragged recipe HTML
+  var recipeEl = draggableElement.textContent;
+  //set dateEl as date in LS
+  //localStorage.setItem('date', JSON.stringify(dateEl));
+  dateArr.push(JSON.stringify(dateEl));
+  //set recipeEl as recipe in LS
+  //localStorage.setItem('recipe', JSON.stringify(recipeEl));
+  recipeArr.push(JSON.stringify(recipeEl));
+
 }
+
+function savedRecipes() {
+  for (i=0; i < recipeArr.length; i++) {
+    var recipe = recipeArr[i];
+    var store = document.createElement('li');
+    store.appendChild(document.createTextNode(recipe));
+    recipeList.appendChild(store);
+  }
+}
+
+
 
 showDates();
 submitEl.addEventListener("click", formSumbitHandler);  
+saveBtnEl.addEventListener("click", savedRecipes)
